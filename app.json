@@ -1,8 +1,8 @@
 {
-  "name": "Python on Heroku example",
-  "description": "A barebones Python app, which can easily be deployed to Heroku.",
+  "name": "Rfix",
+  "description": "Rfix is a lightweight bugracker",
   "image": "heroku/python",
-  "repository": "https://github.com/heroku/python-getting-started",
-  "keywords": ["python", "django" ],
+  "repository": "https://github.com/rasmadeus/rfix.git",
+  "keywords": ["bug", "tracker", "itcry", "k. Kulikov" ],
   "addons": [ "heroku-postgresql" ]
 }
