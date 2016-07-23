@@ -90,4 +90,5 @@ ENV/
 
 # Django
 migrations
+rfixusers
 *.swp

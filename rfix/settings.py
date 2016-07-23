@@ -18,6 +18,7 @@ DEBUG = True
 
 
 # Application definition
+AUTH_USER_MODEL='rfixuser.RfixUser'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -26,7 +27,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rfix.taskstate'
+    'rfix.taskstate',
+    'rfix.rfixuser'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -115,6 +117,8 @@ ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_URL = '/media/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
