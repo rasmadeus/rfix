@@ -27,7 +27,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rfix.taskstate',
+    'rfix.task',
     'rfix.rfixuser'
 )
 

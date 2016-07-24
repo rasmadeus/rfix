@@ -1,8 +1,8 @@
 from django.test import TestCase
-from rfix.taskstate.models import TaskState
+from rfix.taskstate.models import State
 
 
-class TaskStateTest(TestCase):
+class StateTest(TestCase):
     def setUp(self):
         self._objects = [['closed', 'closed project'], ['opened', 'opened task']]
 
