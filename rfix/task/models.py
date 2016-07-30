@@ -56,22 +56,19 @@ class Task(models.Model):
     )
 
     priority = models.ForeignKey(
-        User,
-        related_name='user_priority',
+        Priority,
         null=True,
         on_delete=models.SET_NULL
     )
 
     state = models.ForeignKey(
-        User,
-        related_name='user_state',
+        State,
         null=True,
         on_delete=models.SET_NULL
     )
 
     kind = models.ForeignKey(
-        User,
-        related_name='user_kind',
+        Kind,
         null=True,
         on_delete=models.SET_NULL
     )
