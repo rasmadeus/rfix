@@ -27,8 +27,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rfix.project',
+    'rfix.rfixuser',
     'rfix.task',
-    'rfix.rfixuser'
 )
 
 MIDDLEWARE_CLASSES = (
