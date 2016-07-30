@@ -1,7 +1,7 @@
 from django.contrib import admin
-from rfix.task.models import State
-from rfix.task.models import Priority
+from rfix.task import models
 
 
-admin.site.register(State)
-admin.site.register(Priority)
+admin.site.register(models.Priority)
+admin.site.register(models.State)
+admin.site.register(models.Type)

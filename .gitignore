@@ -92,3 +92,7 @@ ENV/
 migrations
 rfixusers
 *.swp
+staticfiles
+
+# Vim
+.ropeproject
