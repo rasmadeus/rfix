@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic.detail import DetailView
+from rfix.rfixuser import models
 
-# Create your views here.
+
+class RfixUserDetail(DetailView):
+    model = models.RfixUser
+    context_object_name = 'rfixuser'
