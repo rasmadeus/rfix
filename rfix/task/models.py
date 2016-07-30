@@ -1,20 +1,79 @@
 from __future__ import unicode_literals
 from django.db import models
+from rfix.rfixuser.models import RfixUser as User
+from django.utils.translation import ugettext_lazy as tr
 
 
-class Property(models.Model):
+class Priority(models.Model):
+    name = models.CharField(max_length=15)
+    description = models.TextField()
+
+    class Meta:
+        verbose_name = tr('Priority')
+        verbose_name_plural = tr('Priorities')
+
+
+class State(models.Model):
     name = models.CharField(max_length=15)
     description = models.TextField()
 
 
-class Priority(Property):
-    class Meta:
-        verbose_name_plural = 'Priorities'
+class Kind(models.Model):
+    name = models.CharField(max_length=15)
+    description = models.TextField()
 
 
-class State(Property):
-    pass
+class Comment(models.Model):
+    reporter = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    date = models.DateTimeField(auto_now_add=True)
+    comment = models.TextField()
 
 
-class Type(Property):
-    pass
+class Task(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+
+    reporter = models.ForeignKey(
+        User,
+        related_name='user_reporter',
+        null=True,
+        on_delete=models.SET_NULL
+    )
+
+    performer = models.ForeignKey(
+        User,
+        related_name='user_performer',
+        null=True,
+        on_delete=models.SET_NULL
+    )
+
+    tester = models.ForeignKey(
+        User,
+        related_name='user_tester',
+        null=True,
+        on_delete=models.SET_NULL
+    )
+
+    priority = models.ForeignKey(
+        User,
+        related_name='user_priority',
+        null=True,
+        on_delete=models.SET_NULL
+    )
+
+    state = models.ForeignKey(
+        User,
+        related_name='user_state',
+        null=True,
+        on_delete=models.SET_NULL
+    )
+
+    kind = models.ForeignKey(
+        User,
+        related_name='user_kind',
+        null=True,
+        on_delete=models.SET_NULL
+    )
+
+    comments = models.ManyToManyField(Comment)
