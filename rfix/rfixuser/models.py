@@ -9,4 +9,4 @@ class RfixUser(AbstractUser):
     photo = models.ImageField(upload_to='rfixusers')
 
     def get_absolute_url(self):
-        return reverse('detail', args=self.slug)
+        return reverse('rfixuser_detail', args=self.slug)
