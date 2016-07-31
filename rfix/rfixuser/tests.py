@@ -9,7 +9,7 @@ class RfixUserViewTest(TestCase):
     def setUp(self):
         self._slug = 'user'
         self._user = models.RfixUser.objects.create(
-            username=self._slug,
+            username='user',
             email='user@user.com',
             password='password',
             slug=self._slug,

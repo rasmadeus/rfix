@@ -4,6 +4,17 @@ from rfix.rfixuser.models import RfixUser as User
 from django.utils.translation import ugettext_lazy as tr
 
 
+class Comment(models.Model):
+    reporter = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    date = models.DateTimeField(auto_now_add=True)
+    comment = models.TextField()
+
+
+class Kind(models.Model):
+    name = models.CharField(max_length=15)
+    description = models.TextField()
+
+
 class Priority(models.Model):
     name = models.CharField(max_length=15)
     description = models.TextField()
@@ -16,17 +27,6 @@ class Priority(models.Model):
 class State(models.Model):
     name = models.CharField(max_length=15)
     description = models.TextField()
-
-
-class Kind(models.Model):
-    name = models.CharField(max_length=15)
-    description = models.TextField()
-
-
-class Comment(models.Model):
-    reporter = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-    date = models.DateTimeField(auto_now_add=True)
-    comment = models.TextField()
 
 
 class Task(models.Model):
