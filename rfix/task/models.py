@@ -18,6 +18,7 @@ class Kind(models.Model):
 class Priority(models.Model):
     name = models.CharField(max_length=15)
     description = models.TextField()
+    value = models.IntegerField()
 
     class Meta:
         verbose_name = tr('Priority')
