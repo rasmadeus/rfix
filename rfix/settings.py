@@ -18,7 +18,7 @@ DEBUG = True
 
 
 # Application definition
-AUTH_USER_MODEL='rfixuser.RfixUser'
+AUTH_USER_MODEL = 'rfixuser.RfixUser'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -27,6 +27,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
     'rfix.project',
     'rfix.rfixuser',
     'rfix.task',
@@ -126,7 +127,11 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
+SASS_PROCESSOR_INCLUDE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static', 'scss'),
+)
+
+
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
