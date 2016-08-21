@@ -12,17 +12,18 @@
     <body>
         <div class="pro-info-box">
             <nav>
-                <div><a href="">Support</a></div>
-                <div><a href="">Login</a></div>
+                {% for link in links %}
+                <div><a href="{{ link.href }}">{{ link.name }}</a></div>
+                {% endfor %}
             </nav>
             <div class="pro-info-header">
                 <div>
-                    <h1>RFIX</h1>
-                    <p>lightweight bugtracker</p>
+                    <h1>{{ header }}</h1>
+                    <p>{{ subheader }}</p>
                 </div>
             </div>
             <footer>
-                <div>rasmadeus@gmail.com</div>
+                <div>{{ email }}</div>
             </footer>
         </div>
     </body>
