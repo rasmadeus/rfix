@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from django.template.loader import get_template
 from django.shortcuts import redirect
+from rfix.page import models
 
 
 def guest(req):
     template = get_template('guest.html')
-    context = {}
+    context = {'page': models.Page.guest_default()}
     return HttpResponse(template.render(context, req))
 
 

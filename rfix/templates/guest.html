@@ -1,10 +1,13 @@
 {% load sass_tags %}
+{% load meta_builder %}
 <!DOCTYPE html>
-<html lang="">
+<html lang="{{ page.lang }}">
     <head>
         <meta charset="UTF-8">
+        {% autoescape off %}
+        {% build_meta_tags page %}
+        {% endautoescape %}
         <link rel="stylesheet" href="{% sass_src 'scss/guest.scss' %}">
-        <title></title>
     </head>
     <body>
         <div class="pro-info-box">
