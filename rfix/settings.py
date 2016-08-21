@@ -28,6 +28,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
+    'rfix.page',
     'rfix.project',
     'rfix.rfixuser',
     'rfix.task',

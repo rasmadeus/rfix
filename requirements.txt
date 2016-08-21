@@ -6,3 +6,4 @@ whitenoise==2.0.6
 libsass
 django-compressor
 django-sass-processor
+pillow
