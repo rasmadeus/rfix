@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.test import RequestFactory
 from django.test import Client
 from rfix.rfixuser import models
 
@@ -16,7 +15,6 @@ class RfixUserViewTest(TestCase):
         )
         self._user.set_password('password')
         self._user.save()
-        self._factory = RequestFactory()
         self._client = Client()
 
     def test_detail_url(self):

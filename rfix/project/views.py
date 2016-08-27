@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic.detail import DetailView
+from rfix.project import models
 
-# Create your views here.
+
+class ProjectDetail(DetailView):
+    model = models.Project
+    context_object_name = 'project'

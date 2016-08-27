@@ -10,6 +10,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^users/', include('rfix.rfixuser.urls')),
+    url(r'^project/', include('rfix.project.urls')),
     url(r'^$', index, name='index'),
 ]
 
