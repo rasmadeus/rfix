@@ -1,6 +1,5 @@
-<center>
-    <h1>
-        {{ rfixuser.slug }}
-    </h1>
+{% extends "base.html" %}
 
-</center>
+{% block content %}
+    {{ rfixuser.username }}
+{% endblock%}
