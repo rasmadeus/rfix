@@ -1,16 +1,21 @@
+@import 'colors.scss';
+
 $main_caption_size: 20vh;
-$background_color: rgb(30%, 40%, 100%);
+
+html, body, .main, .content {
+    height: 100%;
+}
 
 .content {
-    border: 1px solid black;
-    background-color: $background_color;
+    background-color: $theme-background;
+    color: $theme-text-color;
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 100%;
-    text-align: center;
     width: 100%;
-    height: 100%;
+
     div {
+        text-align: center;
         h1 {
             font-size: $main_caption_size;
             margin: 0px;

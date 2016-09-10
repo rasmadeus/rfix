@@ -1,5 +1,4 @@
-$background_color: rgb(30%, 40%, 100%);
-
+@import 'colors.scss';
 
 html, body {
     margin: 0;
@@ -12,6 +11,10 @@ html, body {
     width: 100%;
 
     nav {
+        a {
+            text-decoration: none;
+        }
+
         display: flex;
         justify-content: flex-end;
         align-self: stretch;
@@ -23,7 +26,12 @@ html, body {
     }
 
     nav, footer {
-        background-color: $background-color;
+        background-color: $theme-background;
+        
+        a, div {
+            color: $theme-text-color;
+        }
+       
         div {
             padding: 10px;
             font-size: 1em;
