@@ -26,10 +26,10 @@ html, body {
     }
 
     nav, footer {
-        background-color: $theme-background;
+        background-color: $theme_background;
         
         a, div {
-            color: $theme-text-color;
+            color: $theme_text_color;
         }
        
         div {
