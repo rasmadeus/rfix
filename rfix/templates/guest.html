@@ -1,30 +1,14 @@
+{% extends "base.html" %}
+
 {% load sass_tags %}
-{% load meta_builder %}
-<!DOCTYPE html>
-<html lang="{{ page.lang }}">
-    <head>
-        <meta charset="UTF-8">
-        {% autoescape off %}
-        {% build_meta_tags page %}
-        {% endautoescape %}
-        <link rel="stylesheet" href="{% sass_src 'scss/guest.scss' %}">
-    </head>
-    <body>
-        <div class="pro-info-box">
-            <nav>
-                {% for link in links %}
-                <div><a href="{{ link.href }}">{{ link.name }}</a></div>
-                {% endfor %}
-            </nav>
-            <div class="pro-info-header">
-                <div>
-                    <h1>{{ header }}</h1>
-                    <p>{{ subheader }}</p>
-                </div>
-            </div>
-            <footer>
-                <div>{{ email }}</div>
-            </footer>
-        </div>
-    </body>
-</html>
+
+{% block head %}
+    <link rel="stylesheet" href="{% sass_src 'scss/guest.scss' %}">
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>{{ header }}</h1>
+        <p>{{ subheader }}</p>
+    </div>
+{% endblock %}

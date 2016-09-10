@@ -1,54 +1,15 @@
-$caption_color:  rgb(100%, 100%, 100%);
-$background_color: rgb(30%, 40%, 100%);
 $main_caption_size: 20vh;
+$background_color: rgb(30%, 40%, 100%);
 
-html, body {
-    height: 100%;
-}
-
-body {
-    margin: 0px;
-    background-color: $background-color;
-    color: $caption_color;
-}
-
-a {
-    text-decoration: none;
-    color: $caption_color;
-}
-
-.pro-info-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        align-self: stretch;
-    }
-
-    footer {
-        display: flex;
-        align-self: stretch;
-    }
-
-    nav, footer {
-        div {
-            padding: 10px;
-            font-size: 1em;
-        }
-    }
-}
-
-.pro-info-header {
+.content {
+    border: 1px solid black;
+    background-color: $background_color;
     display: flex;
     align-items: center;
     height: 100%;
     text-align: center;
-
+    width: 100%;
+    height: 100%;
     div {
         h1 {
             font-size: $main_caption_size;

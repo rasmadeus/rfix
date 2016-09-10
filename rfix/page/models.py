@@ -19,15 +19,3 @@ class Page(models.Model):
         page.keywords = tr('RFIX, bugtracker')
         page.author = tr('K. Kulikov')
         return page
-
-    def head(self):
-        meta = '<meta name="{name}" content="{content}">'
-        tags = [meta.format(name=name, content=content)
-            for name, content in (
-                ('description', self.desc),
-                ('keywords', self.keywords),
-                ('author', self.author),
-            )
-        ]
-        tags.append('<title>{title}</title>'.format(title=self.title))
-        return '\n'.join(tags)

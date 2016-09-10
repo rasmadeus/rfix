@@ -17,4 +17,3 @@ class RfixUserDetail(DetailView):
             {'name': tr('Login'), 'href': '/users/login'}
         )
         return context
-

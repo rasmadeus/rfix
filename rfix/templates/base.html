@@ -1,14 +1,15 @@
-
 {% load sass_tags %}
-{% load meta_builder %}
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
     <head>
         <meta charset="UTF-8">
-        {% autoescape off %}
-        {% build_meta_tags page %}
-        {% endautoescape %}
+        <meta name="description" content="{{ page.desc }}">
+        <meta name="keywords" content="{{ page.keywords }}">
+        <meta name="author" content="{{ page.author }}">
         <link rel="stylesheet" href="{% sass_src 'scss/base.scss' %}">
+        {% block head %}
+        {% endblock %}
+        <title>{{ page.tile }}</title>
     </head>
     <body>
         <div class="main">
@@ -17,7 +18,7 @@
                 <div><a href="{{ link.href }}">{{ link.name }}</a></div>
                 {% endfor %}
             </nav>
-            <div>
+            <div class="content">
                 {% block content %}
                 {% endblock %}
             </div>
