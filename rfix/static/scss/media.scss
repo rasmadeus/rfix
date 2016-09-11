@@ -1,0 +1,21 @@
+$break_small: 512px;
+$break_large: 1024px;
+
+
+@mixin use($media) {
+    @if $media == handhelds {
+        @media only screen and (max-width: $break_small) {
+            @content;
+        }
+    }
+    @else if $media == medium_screens {
+        @media only screen and (min-width: $break_small + 1) and (max-width: $break_large - 1) {
+            @content;
+        }
+    }
+    @else if $media == wide_screens {
+        @media only screen and (min-width: $break_large) {
+            @content;
+        }
+    }
+}

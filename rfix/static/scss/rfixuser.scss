@@ -1,0 +1,50 @@
+@import 'colors.scss';
+@import 'geometry.scss';
+@import 'media.scss';
+
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    padding: $offset_small / 2;
+
+    div {
+        padding: $offset_small;
+        @include use(handhelds) {
+            width: 100%;
+        }
+
+        @include use(medium_screens) {
+            width: (100% / 2);
+        }
+
+        @include use(wide_screens) {
+            width: (100% / 4);
+        }
+
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        header {
+           width: 100%;
+           padding: $offset_small;
+           box-sizing: border-box;
+           background-color: $theme_background_second;
+           border-radius: 2 * $offset 2 * $offset 0 0;
+        }
+
+        div {
+            width: 100%;
+            padding: $offset_small;
+            box-sizing: border-box;
+            border: 2px solid $theme_background_second;
+            border-top: 0px;
+        }
+    }
+}

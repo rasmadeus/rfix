@@ -1,4 +1,6 @@
 @import 'colors.scss';
+@import 'geometry.scss';
+
 
 html, body {
     margin: 0;
@@ -27,13 +29,13 @@ html, body {
 
     nav, footer {
         background-color: $theme_background;
-        
+
         a, div {
             color: $theme_text_color;
         }
-       
+
         div {
-            padding: 10px;
+            padding: $offset;
             font-size: 1em;
         }
     }
