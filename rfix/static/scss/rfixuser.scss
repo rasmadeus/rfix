@@ -24,7 +24,7 @@
         }
 
         @include use(wide_screens) {
-            width: (100% / 4);
+            width: (100% / 3);
         }
 
         display: flex;
@@ -32,11 +32,21 @@
         box-sizing: border-box;
 
         header {
+           $radius: 2 * $offset;
+
            width: 100%;
            padding: $offset_small;
            box-sizing: border-box;
            background-color: $theme_background_second;
-           border-radius: 2 * $offset 2 * $offset 0 0;
+           border-radius: $radius $radius 0 0;
+           text-align: center;
+
+           h1 {
+               margin: 0;
+               font-size: 1em;
+               color: $theme_text_color;
+               font-family: $theme_font;
+           }
         }
 
         div {
