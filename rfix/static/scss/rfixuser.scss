@@ -13,15 +13,15 @@
     padding: $offset_small;
 
     div {
-        @include use(handhelds) {
+        @include use(small) {
             width: 100%;
         }
 
-        @include use(medium_screens) {
+        @include use(medium) {
             width: (100% / 2);
         }
 
-        @include use(wide_screens) {
+        @include use(large) {
             width: (100% / 3);
         }
 
@@ -48,7 +48,7 @@
             div {
                 width: 100%;
                 border: 2px solid $theme_background_second;
-                border-top: 0px;
+                border-top: 0;
             }
         }
     }

@@ -3,17 +3,17 @@ $break_large: 1024px;
 
 
 @mixin use($media) {
-    @if $media == handhelds {
+    @if $media == small {
         @media only screen and (max-width: $break_small) {
             @content;
         }
     }
-    @else if $media == medium_screens {
+    @else if $media == medium {
         @media only screen and (min-width: $break_small + 1) and (max-width: $break_large - 1) {
             @content;
         }
     }
-    @else if $media == wide_screens {
+    @else if $media == large {
         @media only screen and (min-width: $break_large) {
             @content;
         }
