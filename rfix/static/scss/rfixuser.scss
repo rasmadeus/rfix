@@ -6,15 +6,13 @@
 .content {
     width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: flex-start;
     align-content: flex-start;
     flex-flow: row wrap;
     box-sizing: border-box;
-    padding: $offset_small / 2;
+    padding: $offset_small;
 
     div {
-        padding: $offset_small;
         @include use(handhelds) {
             width: 100%;
         }
@@ -31,30 +29,27 @@
         flex-direction: column;
         box-sizing: border-box;
 
-        header {
-           $radius: 2 * $offset;
-
-           width: 100%;
-           padding: $offset_small;
-           box-sizing: border-box;
-           background-color: $theme_background_second;
-           border-radius: $radius $radius 0 0;
-           text-align: center;
-
-           h1 {
-               margin: 0;
-               font-size: 1em;
-               color: $theme_text_color;
-               font-family: $theme_font;
-           }
-        }
-
         div {
             width: 100%;
-            padding: $offset_small;
+            display: flex;
+            flex-direction: column;
             box-sizing: border-box;
-            border: 2px solid $theme_background_second;
-            border-top: 0px;
+            padding: $offset_small;
+
+            header {
+                width: 100%;
+                background-color: $theme_background_second;
+                text-align: center;
+                font-size: 1em;
+                color: $theme_text_color;
+                font-family: $theme_font;
+            }
+
+            div {
+                width: 100%;
+                border: 2px solid $theme_background_second;
+                border-top: 0px;
+            }
         }
     }
 }
