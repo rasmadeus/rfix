@@ -39,6 +39,7 @@ class Task(models.Model):
         User,
         related_name='user_reporter',
         null=True,
+        blank=True,
         on_delete=models.SET_NULL
     )
 
@@ -49,28 +50,40 @@ class Task(models.Model):
         on_delete=models.SET_NULL
     )
 
+    reviewer = models.ForeignKey(
+        User,
+        related_name='user_reviewer',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
+
     tester = models.ForeignKey(
         User,
         related_name='user_tester',
         null=True,
+        blank=True,
         on_delete=models.SET_NULL
     )
 
     priority = models.ForeignKey(
         Priority,
         null=True,
+        blank=True,
         on_delete=models.SET_NULL
     )
 
     state = models.ForeignKey(
         State,
         null=True,
+        blank=True,
         on_delete=models.SET_NULL
     )
 
     kind = models.ForeignKey(
         Kind,
         null=True,
+        blank=True,
         on_delete=models.SET_NULL
     )
 

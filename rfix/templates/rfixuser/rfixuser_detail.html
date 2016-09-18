@@ -10,66 +10,46 @@
 
 
 {% block content %}
-    <div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
+    {% if performer_tasks %}
+        {% for task in performer_tasks %}
             <div>
+                <div>
+                    <header>
+                        {{ task.name }}
+                    </header>
+                    <div>
+                        {{ task.name }}
+                    </div>
+                </div>
             </div>
-        </div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
+        {% endfor %}
+    {% endif %}
+    {% if reviewer_tasks %}
+        {% for task in reviewer_tasks %}
             <div>
+                <div>
+                    <header>
+                        {{ task.name }}
+                    </header>
+                    <div>
+                        {{ task.name }}
+                    </div>
+                </div>
             </div>
-        </div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
+        {% endfor %}
+    {% endif %}
+    {% if tester_tasks %}
+        {% for task in tester_tasks %}
             <div>
+                <div>
+                    <header>
+                        {{ task.name }}
+                    </header>
+                    <div>
+                        {{ task.name }}
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
-            <div>
-            </div>
-        </div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
-            <div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
-            <div>
-            </div>
-        </div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
-            <div>
-            </div>
-        </div>
-        <div>
-            <header>
-                {{ rfixuser.username }}
-            </header>
-            <div>
-            </div>
-        </div>
-    </div>
+        {% endfor %}
+    {% endif %}
 {% endblock%}
