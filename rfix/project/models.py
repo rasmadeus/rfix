@@ -8,7 +8,7 @@ class Project(models.Model):
     slug = models.SlugField(unique=True)
     name = models.CharField(max_length=255)
     description = models.TextField()
-    tasks = models.ManyToManyField(Task, blank=True)
+    tasks = models.ManyToManyField(Task, related_name='tasks', blank=True)
 
     def get_absolute_url(self):
         return reverse('project_detail', kwargs={'slug': self.slug})

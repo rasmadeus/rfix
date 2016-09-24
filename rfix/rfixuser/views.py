@@ -11,6 +11,7 @@ class RfixUserDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(RfixUserDetail, self).get_context_data(**kwargs)
+
         context['page'] = Page.guest_default()
         context['email'] = 'rasmadeus@gmail.com'
         context['links'] = (
@@ -19,8 +20,19 @@ class RfixUserDetail(DetailView):
         )
 
         user = context['rfixuser']
-        context['performer_tasks'] = Task.objects.filter(performer=user)
-        context['reviewer_tasks'] = Task.objects.filter(reviewer=user)
-        context['tester_tasks'] = Task.objects.filter(tester=user)
+        context['groups'] = (
+            {
+                'header': tr('Tasks to perform'),
+                'tasks': Task.objects.filter(performer=user)
+            },
+            {
+                'header': tr('Tasks to review'),
+                'tasks': Task.objects.filter(reviewer=user)
+            },
+            {
+                'header': tr('Tasks to test'),
+                'tasks': Task.objects.filter(tester=user)
+            },
+        )
 
         return context

@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
-from django.db import models
 from rfix.rfixuser.models import RfixUser as User
+from django.core.urlresolvers import reverse
+from django.db import models
 from django.utils.translation import ugettext_lazy as tr
 
 
@@ -34,6 +35,8 @@ class Task(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+
+    project = models.ForeignKey('project.Project')
 
     reporter = models.ForeignKey(
         User,
@@ -87,4 +90,14 @@ class Task(models.Model):
         on_delete=models.SET_NULL
     )
 
-    comments = models.ManyToManyField(Comment)
+    comments = models.ManyToManyField(Comment, blank=True)
+
+    def get_absolute_url(self):
+        return reverse('task_detail', kwargs={'pk': self.id})
+
+    def header(self):
+        return '{project}-{number}: {name}'.format(
+            project=self.project.slug,
+            number=self.id,
+            name=self.name
+        )
