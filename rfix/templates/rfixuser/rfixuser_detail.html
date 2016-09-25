@@ -19,7 +19,9 @@
                 <div>
                     {% for task in group.tasks %}
                         <p>
-                            <a href="{{ task.get_absolute_url }}">{{ task.header }}</a>
+                            <a href="{{ task.get_absolute_url }}">
+                                {{ task.header }}
+                            </a>
                         </p>
                     {% endfor %}
                 </div>
