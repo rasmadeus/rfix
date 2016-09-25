@@ -2,7 +2,7 @@
 
 
 {% load sass_tags %}
-{% load captions %}
+
 
 {% block head %}
     <link rel="stylesheet" href="{% sass_src 'scss/rfixuser.scss' %}">
@@ -19,7 +19,7 @@
                 <div>
                     {% for task in group.tasks %}
                         <p>
-                            {% header task %}
+                            <a href="{{ task.get_absolute_url }}">{{ task.header }}</a>
                         </p>
                     {% endfor %}
                 </div>

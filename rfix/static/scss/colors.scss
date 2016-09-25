@@ -4,4 +4,7 @@ $text_background: rgb(80%, 80%, 100%);
 $text_background_second: lighten($text_background, 5%);
 $theme_text_color: rgb(100%, 100%, 100%);
 
+$text_dark_color: darken($theme_background, 40%);
+$mark_text_dark_color: lighten($text_dark_color, 30%);
+
 $theme_font: 'Didact Gothic', sans-serif;

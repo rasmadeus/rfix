@@ -56,6 +56,15 @@
                     margin: 0;
                     padding: $offset_small;
                     font-family: $theme_font;
+
+                    a {
+                        text-decoration: none;
+                        color: $text_dark_color;
+                    }
+
+                    a:hover {
+                        color: $mark_text_dark_color;
+                    }
                 }
 
                 p:nth-child(2n) {
