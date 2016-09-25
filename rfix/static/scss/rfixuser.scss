@@ -38,40 +38,40 @@
 
             header {
                 width: 100%;
-                background-color: $theme_background_second;
+                background-color: $header_bg_color;
                 text-align: center;
                 font-size: 1em;
-                color: $theme_text_color;
-                font-family: $theme_font;
+                color: $main_text_color;
+                font-family: $main_font;
             }
 
             div {
                 width: 100%;
-                border: 2px solid $theme_background_second;
+                border: 2px solid $header_bg_color;
                 border-top: 0;
                 padding: 0;
 
                 p {
-                    background: $text_background;
+                    background: $text_bg_color;
                     margin: 0;
                     padding: $offset_small;
-                    font-family: $theme_font;
+                    font-family: $main_font;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
 
                     a {
                         text-decoration: none;
-                        color: $text_dark_color;
+                        color: $main_dark_text_color;
                     }
 
                     a:hover {
-                        color: $mark_text_dark_color;
+                        color: $mark_main_dark_text_color;
                     }
                 }
 
                 p:nth-child(2n) {
-                    background: $text_background_second;
+                    background: $text_bg_color_alt;
                 }
             }
         }

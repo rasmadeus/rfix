@@ -1,10 +1,10 @@
-$theme_background: rgb(40%, 30%, 100%);
-$theme_background_second: lighten($theme_background, 5%);
-$text_background: rgb(80%, 80%, 100%);
-$text_background_second: lighten($text_background, 5%);
-$theme_text_color: rgb(100%, 100%, 100%);
+$main_bg_color: rgb(40%, 30%, 100%);
+$header_bg_color: lighten($main_bg_color, 5%);
+$text_bg_color: rgb(80%, 80%, 100%);
+$text_bg_color_alt: lighten($text_bg_color, 5%);
+$main_text_color: rgb(100%, 100%, 100%);
 
-$text_dark_color: darken($theme_background, 40%);
-$mark_text_dark_color: lighten($text_dark_color, 30%);
+$main_dark_text_color: darken($main_bg_color, 40%);
+$mark_main_dark_text_color: lighten($main_dark_text_color, 30%);
 
-$theme_font: 'Didact Gothic', sans-serif;
+$main_font: 'Didact Gothic', sans-serif;

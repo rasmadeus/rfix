@@ -7,8 +7,8 @@ html, body, .main, .content {
 }
 
 .content {
-    background-color: $theme_background;
-    color: $theme_text_color;
+    background-color: $main_bg_color;
+    color: $main_text_color;
     display: flex;
     justify-content: center;
     align-items: center;

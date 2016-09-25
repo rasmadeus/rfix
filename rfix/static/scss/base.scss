@@ -28,16 +28,16 @@ html, body {
     }
 
     nav, footer {
-        background-color: $theme_background;
+        background-color: $main_bg_color;
 
         a, div {
-            color: $theme_text_color;
+            color: $main_text_color;
         }
 
         div {
             padding: $offset;
             font-size: 1em;
-            font-family: $theme_font;
+            font-family: $main_font;
         }
     }
 }
