@@ -49,6 +49,18 @@
                 width: 100%;
                 border: 2px solid $theme_background_second;
                 border-top: 0;
+                padding: 0;
+
+                p {
+                    background: $text_background;
+                    margin: 0;
+                    padding: $offset_small;
+                    font-family: $theme_font;
+                }
+
+                p:nth-child(2n) {
+                    background: $text_background_second;
+                }
             }
         }
     }
