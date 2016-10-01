@@ -1,11 +1,8 @@
 {% load sass_tags %}
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="{{ page.desc }}">
-        <meta name="keywords" content="{{ page.keywords }}">
-        <meta name="author" content="{{ page.author }}">
         <link rel="stylesheet" href="{% sass_src 'scss/base.scss' %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
         {% block head %}
@@ -24,7 +21,7 @@
                 {% endblock %}
             </div>
             <footer>
-                <div>{{ email }}</div>
+                <div>rasmadeus@gmail.com</div>
             </footer>
         </div>
     </body>
