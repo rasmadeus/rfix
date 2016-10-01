@@ -11,12 +11,8 @@ class RfixUserDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(RfixUserDetail, self).get_context_data(**kwargs)
 
-        context['links'] = (
-            {'name': tr('Support'), 'href': '/support'},
-            {'name': tr('Login'), 'href': '/users/login'}
-        )
-
         user = context['rfixuser']
+
         context['groups'] = (
             {
                 'header': tr('Tasks to perform'),
