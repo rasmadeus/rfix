@@ -37,6 +37,7 @@ html, body {
 
                 a {
                     display: block;
+                    color: $main_text_color;
                 }
             }
 
@@ -78,14 +79,13 @@ html, body {
         background-color: $main_bg_color;
         width: 100%;
         font-family: $main_font;
+    }
 
-        a, div {
-            color: $main_text_color;
-        }
-
+    footer {
         div {
             padding: $offset;
             font-size: 1em;
+            color: $main_text_color;
         }
     }
 }
