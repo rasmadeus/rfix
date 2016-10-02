@@ -12,9 +12,21 @@
     <body>
         <div class="main">
             <nav>
-                {% for link in links %}
-                <div><a href="{{ link.href }}">{{ link.name }}</a></div>
-                {% endfor %}
+                <ul>
+                    {% for link in links %}
+                        <li>
+                            <a href="{{ link.href }}">{{ link.name }}</a>
+                            {% if link.sublinks %}
+                                <ul>
+                                    {% for sublink in link.sublinks %}
+                                        <li>
+                                            <a href="{{ sublink.href }}">{{ sublink.name }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
             </nav>
             <div class="content">
                 {% block content %}

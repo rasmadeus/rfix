@@ -13,22 +13,70 @@ html, body {
     width: 100%;
 
     nav {
-        a {
-            text-decoration: none;
+        top: 0;
+        left: 0;
+
+        ul {
+            list-style: none;
+            position: relative;
+            float: right;
+            display: inline-table;
+            margin: 0;
+            padding: 0;
+
+            li {
+                float: left;
+                transition: all 0.333s ease-in-out;
+                margin: 0;
+                padding: $offset_small 0.5em $offset_small 0.5em;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    outline: 0;
+                }
+            }
+
+            li:hover {
+                ul {
+                    display: block;
+                }
+                background-color: $header_bg_color;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                display: none;
+                position: absolute;
+                top: 100%;
+                background-color: $text_bg_color_alt;
+                margin-left: -0.5em;
+
+                li {
+                    float: none;
+                    position: relative;
+
+                    a {
+                        text-decoration: none;
+                        color: $main_dark_text_color;
+                        outline: 0;
+                    }
+
+                    border-bottom: 1px solid $text_bg_color;
+                }
+
+                li:hover {
+                    background-color: $text_bg_color;
+                }
+            }
         }
-
-        display: flex;
-        justify-content: flex-end;
-        align-self: stretch;
-    }
-
-    footer {
-        display: flex;
-        align-self: stretch;
     }
 
     nav, footer {
         background-color: $main_bg_color;
+        width: 100%;
+        font-family: $main_font;
 
         a, div {
             color: $main_text_color;
@@ -37,7 +85,6 @@ html, body {
         div {
             padding: $offset;
             font-size: 1em;
-            font-family: $main_font;
         }
     }
 }
