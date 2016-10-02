@@ -2,6 +2,9 @@ from django.views.generic.detail import DetailView
 from django.utils.translation import ugettext_lazy as tr
 from rfix.rfixuser import models
 from rfix.task.models import Task
+from rfix.rfixuser import forms
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
 
 class RfixUserDetail(DetailView):
@@ -29,3 +32,13 @@ class RfixUserDetail(DetailView):
         )
 
         return context
+
+
+def login(req):
+    if req.method == 'POST':
+        form = forms.Login(req.POST)
+        if form.is_valid():
+            return HttpResponseRedirect('/')
+    else:
+        form = forms.Login()
+    return render(req, 'rfixuser/login.html', {'form': form})

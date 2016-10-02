@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% load sass_tags %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% sass_src 'scss/login.scss' %}">
+{% endblock %}
+
+
+{% block content %}
+    <form action="/users/login" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Login" />
+    </form>
+{% endblock%}
