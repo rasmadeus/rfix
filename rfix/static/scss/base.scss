@@ -12,6 +12,11 @@ html, body {
     align-items: center;
     width: 100%;
 
+    a {
+        outline: 0;
+        text-decoration: none;
+    }
+
     nav {
         top: 0;
         left: 0;
@@ -32,8 +37,6 @@ html, body {
 
                 a {
                     display: block;
-                    text-decoration: none;
-                    outline: 0;
                 }
             }
 
@@ -58,9 +61,7 @@ html, body {
                     position: relative;
 
                     a {
-                        text-decoration: none;
                         color: $main_dark_text_color;
-                        outline: 0;
                     }
 
                     border-bottom: 1px solid $text_bg_color;
