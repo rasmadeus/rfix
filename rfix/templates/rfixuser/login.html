@@ -10,9 +10,32 @@
 
 
 {% block content %}
-    <form action="/users/login" method="post">
+    <header>
+        <h1>
+            Form header
+        </h1>
+    </header>
+    <form method="post">
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Login" />
+        {% for field in form %}
+            <div>
+                <div>
+                    {{ field.label_tag }}
+                </div>
+                <div>
+                    {{ field }}
+                </div>
+            </div>
+        {% endfor %}
+        <div>
+            <div>
+                <label for="id_username">Check data and press button:</label>
+            </div>
+            <div>
+                <button type="submit">
+                    Login
+                </button>
+            </div>
+        </div>
     </form>
 {% endblock%}

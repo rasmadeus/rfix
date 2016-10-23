@@ -6,5 +6,6 @@ $main_text_color: rgb(100%, 100%, 100%);
 
 $main_dark_text_color: darken($main_bg_color, 40%);
 $mark_main_dark_text_color: lighten($main_dark_text_color, 30%);
+$text_important_color: rgb(80%, 0%, 0%);
 
 $main_font: 'Didact Gothic', sans-serif;
