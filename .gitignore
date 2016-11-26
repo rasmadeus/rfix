@@ -89,7 +89,6 @@ ENV/
 .ropeproject
 
 # Django
-migrations
 rfixusers
 *.swp
 staticfiles
